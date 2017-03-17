@@ -21,8 +21,8 @@ typedef struct Matrix {
 
 extern const Matrix IDENTITY_MATRIX;
 
-float Contangent(float angle);
-float DegreeToRadians(float degrees);
+float Cotangent(float angle);
+float DegreesToRadians(float degrees);
 float RadiansToDegrees(float radians);
 
 Matrix MultiplyMatrices(const Matrix *m1, const Matrix *m2);

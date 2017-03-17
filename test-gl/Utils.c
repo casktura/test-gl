@@ -7,8 +7,8 @@ const Matrix IDENTITY_MATRIX = { {
 		0, 0, 0, 1
 } };
 
-float Contangent(float angle) {
-	return (float) 1.0 / tan(angle);
+float Cotangent(float angle) {
+	return (float)(1.0 / tan(angle));
 }
 
 float DegreesToRadians(float degrees) {
@@ -97,7 +97,7 @@ void RotateAboutZ(Matrix *m, float angle) {
 Matrix CreateProjectionMatrix(float fovy, float aspect_ratio, float near_plane, float far_plane) {
 	Matrix out = { {0} };
 
-	const float y_scale = Contangent(DegreesToRadians(fovy / 2));
+	const float y_scale = Cotangent(DegreesToRadians(fovy / 2));
 	const float x_scale = y_scale / aspect_ratio;
 	const float frustum_length = far_plane - near_plane;
 
